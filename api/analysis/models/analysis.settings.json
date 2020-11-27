@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "analyses",
+  "info": {
+    "name": "analysis",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "organization": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "results": {
+      "type": "component",
+      "repeatable": true,
+      "component": "capacity-result.capacity-result"
+    },
+    "template": {
+      "model": "template",
+      "via": "analyses"
+    },
+    "uid": {
+      "type": "uid"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

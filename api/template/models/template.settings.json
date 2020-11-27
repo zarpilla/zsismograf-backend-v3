@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "templates",
+  "info": {
+    "name": "Template",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "analysis": {
+      "type": "component",
+      "repeatable": false,
+      "component": "analysis.analysis"
+    },
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "analyses": {
+      "via": "template",
+      "collection": "analysis"
+    }
+  }
+}

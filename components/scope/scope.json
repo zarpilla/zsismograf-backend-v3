@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_scope_scopes",
+  "info": {
+    "name": "scope",
+    "icon": "arrow-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "text_en": {
+      "type": "string"
+    },
+    "text_es": {
+      "type": "string"
+    },
+    "text_ca": {
+      "type": "string"
+    },
+    "capacities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "capacity.capacity"
+    }
+  }
+}

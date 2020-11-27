@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_capacity_result_capacity_results",
+  "info": {
+    "name": "CapacityResult",
+    "icon": "caret-right"
+  },
+  "options": {},
+  "attributes": {
+    "capacity": {
+      "type": "integer"
+    },
+    "result": {
+      "type": "integer"
+    }
+  }
+}

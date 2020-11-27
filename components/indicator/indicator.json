@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_indicator_indicators",
+  "info": {
+    "name": "indicator",
+    "icon": "angle-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text_en": {
+      "type": "string"
+    },
+    "text_es": {
+      "type": "string"
+    },
+    "text_ca": {
+      "type": "string"
+    },
+    "value": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

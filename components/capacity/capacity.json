@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_capacity_capacities",
+  "info": {
+    "name": "capacity",
+    "icon": "angle-double-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text_en": {
+      "type": "string"
+    },
+    "text_es": {
+      "type": "string"
+    },
+    "text_ca": {
+      "type": "string"
+    },
+    "indicators": {
+      "type": "component",
+      "repeatable": true,
+      "component": "indicator.indicator"
+    },
+    "result": {
+      "type": "integer"
+    }
+  }
+}

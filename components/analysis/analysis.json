@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_analysis_analyses",
+  "info": {
+    "name": "analysis",
+    "icon": "asterisk"
+  },
+  "options": {},
+  "attributes": {
+    "name_en": {
+      "type": "string"
+    },
+    "name_ca": {
+      "type": "string"
+    },
+    "name_es": {
+      "type": "string"
+    },
+    "scopes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "scope.scope"
+    },
+    "description_en": {
+      "type": "richtext"
+    },
+    "description_ca": {
+      "type": "richtext"
+    },
+    "description_es": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
