@@ -2,11 +2,12 @@
   "collectionName": "components_capacity_result_capacity_results",
   "info": {
     "name": "CapacityResult",
-    "icon": "caret-right"
+    "icon": "caret-right",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "capacity": {
+    "question": {
       "type": "integer"
     },
     "result": {

@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_capacity_capacities",
+  "collectionName": "components_question_questions",
   "info": {
-    "name": "capacity",
+    "name": "question",
     "icon": "angle-double-right",
     "description": ""
   },
@@ -20,11 +20,6 @@
       "type": "component",
       "repeatable": true,
       "component": "indicator.indicator"
-    },
-    "questions": {
-      "type": "component",
-      "repeatable": true,
-      "component": "question.question"
     },
     "result": {
       "type": "integer"
