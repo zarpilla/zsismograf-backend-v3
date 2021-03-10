@@ -83,6 +83,13 @@ nbproject
 public/uploads/*
 !public/uploads/.gitkeep
 
+!public/uploads/jquery_70379cbcd5.js
+!public/uploads/custom_e96339c3f0.css
+!public/uploads/kendo_all_min_079022c1df.js
+!public/uploads/kendo_common_min_1c8f47c042.css
+!public/uploads/kendo_custom_c9e7ec10c4.css
+!public/uploads/fonts/*
+
 ############################
 # Node.js
 ############################
@@ -112,3 +119,5 @@ license.txt
 exports
 .cache
 build
+
+config/database.js

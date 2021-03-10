@@ -1,0 +1,12 @@
+
+@font-face{font-family:WebComponentsIcons;src:url(fonts/glyphs/WebComponentsIcons.eot?gedxeo);src:url(fonts/glyphs/WebComponentsIcons.eot?gedxeo#iefix) format('embedded-opentype'),url(fonts/glyphs/WebComponentsIcons.ttf?gedxeo) format('truetype'),url(fonts/glyphs/WebComponentsIcons.woff?gedxeo) format('woff'),url(fonts/glyphs/WebComponentsIcons.svg?gedxeo#WebComponentsIcons) format('svg')};
+
+.k-header, .k-grid-header, .k-grouping-header, .k-pager-wrap, .k-state-highlight, .k-panelbar .k-tabstrip-items .k-item{
+  background-color: #f3f3f3;
+  border-color: #ddd;
+}
+.k-pivot-toolbar .k-button{
+  background-color: #999;
+  border-color: #999;
+}
+

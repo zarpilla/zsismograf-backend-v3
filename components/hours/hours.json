@@ -22,6 +22,12 @@
     },
     "total_amount": {
       "type": "decimal"
+    },
+    "year": {
+      "model": "year"
+    },
+    "month": {
+      "model": "month"
     }
   }
 }

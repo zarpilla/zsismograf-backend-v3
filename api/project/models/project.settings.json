@@ -20,8 +20,8 @@
       "type": "richtext"
     },
     "strategies": {
-      "via": "projects",
       "collection": "strategy",
+      "via": "projects",
       "dominant": true
     },
     "project_scope": {

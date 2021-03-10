@@ -15,6 +15,10 @@ import useFetch from './hooks';
 import { ALink, Block, Container, LinkWrapper, P, Wave, Separator } from './components';
 import BlogPost from './BlogPost';
 import SocialLink from './SocialLink';
+import ProjectLink from './ProjectLink';
+import Stats from './Stats';
+
+import eventBus from "./EventBus";
 
 const FIRST_BLOCK_LINKS = [
 //   {
@@ -62,7 +66,9 @@ const SOCIAL_LINKS = [
 ];
 
 const HomePage = ({ history: { push } }) => {
-  const { error, isLoading, posts } = useFetch();
+  
+  //const { error, isLoadingProjects, projects } = useFetch();
+
   // Temporary until we develop the menu API
   const { collectionTypes, singleTypes, isLoading: isLoadingForModels } = useModels();
 
@@ -102,13 +108,6 @@ const HomePage = ({ history: { push } }) => {
     return <LoadingIndicatorPage />;
   }
 
-//   var Hello = React.createClass({
-//     render: function() {
-//         return <div>Hello, haters!</div>;
-//     }
-// });
-
-
   const headerId = hasAlreadyCreatedContentTypes
     ? 'HomePage.greetings'
     : 'app.components.HomePage.welcome';
@@ -121,24 +120,40 @@ const HomePage = ({ history: { push } }) => {
         target: '_blank',
       };
 
-      const linkProjects2 = {                
-        id: 'Projectes',
-        text: 'Projectes',
-        href: '',
-        onClick: handleClickProjects,
-        type: 'blog',
-        target: '_blank',
-      };
+  const linkSocial = {
+      id: 'Entitats',        
+      href: '',
+      onClick: handleClickSocial,
+      type: 'blog',
+      target: '_blank',
+    };
+  
+    const linkStats = {
+      id: 'Stats',        
+      href: '',
+      onClick: handleClickStats,
+      type: 'blog',
+    };
 
+    const linkStats2 = {
+      id: 'Stats',        
+      href: '',
+      onClick: handleClickStats2,
+      type: 'blog',
+    };
 
-    const linkSocial = {
-        id: 'Entitats Intercooperació',        
-        href: '',
-        onClick: handleClickSocial,
-        type: 'blog',
-        target: '_blank',
-      };
     
+    const handleClickStats = e => {
+      e.preventDefault();      
+      eventBus.dispatch("showStats", { message: 'showStats' });
+    };
+
+    const handleClickStats2 = e => {
+      e.preventDefault();      
+      eventBus.dispatch("showStats", { message: 'showStats2' });
+    };
+  
+    let showStats = false;
 
   return (
     <>
@@ -165,32 +180,50 @@ const HomePage = ({ history: { push } }) => {
               <p>
                   Welcome
               </p>
-              <FormattedMessage id={linkProjects2.id}>
-                {msg => (
+              <div className="row">
+                <div className="col-lg-2 col-md-3 col-xs-12">
                   <ALink
-                    rel="noopener noreferrer"
-                    {...linkProjects}
-                    style={{ verticalAlign: ' bottom', marginBottom: 5 }}
-                  >
-                    {msg}
-                  </ALink>
-                )}
-              </FormattedMessage>
-              
-                <br/>
-              <FormattedMessage id={linkSocial.id}>
-                {msg => (
-                  <ALink
+                      rel="noopener noreferrer"
+                      {...linkProjects}
+                      style={{ verticalAlign: ' bottom', marginBottom: 5 }}
+                    >
+                      Projectes
+                    </ALink>                  
+                </div>
+                <div className="col-lg-2 col-md-3 col-xs-12">
+                <ALink
                     rel="noopener noreferrer"
                     {...linkSocial}
                     style={{ verticalAlign: ' bottom', marginBottom: 5 }}
                   >
-                    {msg}
+                    Entitats
                   </ALink>
-                )}
-              </FormattedMessage>
-
+                </div>
+                <div className="col-lg-2 col-md-3 col-xs-12">
+                  <ALink
+                    rel="noopener noreferrer"
+                    {...linkStats}
+                    style={{ verticalAlign: ' bottom', marginBottom: 5 }}
+                    onClick={handleClickStats}
+                  >
+                    Est. Projectes
+                  </ALink>
+                </div>
+                <div className="col-lg-2 col-md-3 col-xs-12">
+                  <ALink
+                    rel="noopener noreferrer"
+                    {...linkStats2}
+                    style={{ verticalAlign: ' bottom', marginBottom: 5 }}
+                    onClick={handleClickStats2}
+                  >
+                    Est. Dedicació
+                  </ALink>
+                </div>
+              </div>
               <Separator style={{ marginTop: 37, marginBottom: 36 }} />
+
+              <Stats />
+              
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 {FIRST_BLOCK_LINKS.map((data, index) => {
                   const type = index === 0 ? 'doc' : 'code';
