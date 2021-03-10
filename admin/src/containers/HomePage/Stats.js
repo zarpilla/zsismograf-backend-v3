@@ -3,6 +3,10 @@ import eventBus from "./EventBus";
 import { auth } from 'strapi-helper-plugin';
 import axios from 'axios';
 import moment from 'moment';
+import configProject  from "./ConfigStatsProject";
+import configDedication  from "./ConfigStatsDedication";
+import configStrategy  from "./ConfigStatsStrategy";
+import configEntity  from "./ConfigStatsEntity";
 
 class Stats extends Component {
   constructor(props) {
@@ -20,8 +24,6 @@ class Stats extends Component {
     eventBus.on("showStats", async (data) => {
         
         this.setState({ message: data.message })
-
-        console.log('moment', moment)
 
         let addScript = async (src) => {
           return new Promise((resolve, reject) => {
@@ -48,29 +50,36 @@ class Stats extends Component {
           });
         }
       
-        
-
         await addScript(`${strapi.backendURL}/uploads/jquery_70379cbcd5.js`)
         await addScript(`${strapi.backendURL}/uploads/kendo_all_min_079022c1df.js`)      
         await addStyle(`${strapi.backendURL}/uploads/kendo_common_min_1c8f47c042.css`)
         await addStyle(`${strapi.backendURL}/uploads/kendo_custom_c9e7ec10c4.css`)
         await addStyle(`${strapi.backendURL}/uploads/custom_e96339c3f0.css`)
 
-
-        
-        
+        const compare_date = ( a, b ) => {
+          const prop = 'date'
+          if ( a[prop] < b[prop] ){
+            return -1;
+          }
+          if ( a[prop] > b[prop] ){
+            return 1;
+          }
+          return 0;
+        }
+                
         const token = auth.getToken()
         const headers = { headers: {'Authorization': 'Bearer ' + token }};
         const url = `${strapi.backendURL}/content-manager/collection-types/application::project.project?page=1&pageSize=9999`;
 
         const fetchData = async () => {
         try {
-            const { data } = await axios.get(
-            url,
-            headers
-            );
-            //const projects = data.results
+            
             if (this.state.message === 'showStats') {
+              const { data } = await axios.get(
+                url,
+                headers
+                );
+
               const pivotedProjects = data.results.map(p =>  {
                 return {
                   name: p.name,                
@@ -96,6 +105,12 @@ class Stats extends Component {
               return pivotedProjects;
             }
             else if (this.state.message === 'showStats2') {
+
+              const { data } = await axios.get(
+                url,
+                headers
+                );
+
               const pivotedProjects = [];
               data.results.forEach(p =>  {
                 //console.log('project', p)
@@ -113,6 +128,7 @@ class Stats extends Component {
                       month: d.date ? moment(d.date).format('MM').toString() : 0,
                       year: d.date ? moment(d.date).format('YYYY').toString() : 0,
                       day: d.date ? moment(d.date).format('DD').toString() : 0,
+                      date: d.date ? moment(d.date).format('YYYY-MM-DD').toString() : '-',
                       hours: d.hours ? d.hours : 0,
                       estimated_hours: 0,
                       dedication_type: d.dedication_type ? d.dedication_type.name : '-',
@@ -137,6 +153,7 @@ class Stats extends Component {
                       month: d.month ? d.month.month_number.toString() : 0,
                       year: d.year ? d.year.year.toString() : 0,
                       day: 0,
+                      date: '-',
                       hours: 0,
                       estimated_hours: d.quantity ? d.quantity : 0,
                       dedication_type: '-',
@@ -147,7 +164,95 @@ class Stats extends Component {
                   });
                 }
               });
+
+              //console.log('pivotedProjects', pivotedProjects)
   
+              const projects = data.results;
+              this.setState({ isLoading: false, projects, error: false });
+
+              return pivotedProjects.sort( compare_date );;
+            }
+            else if (this.state.message === 'showStats3') {
+              const pivotedProjects = [];
+              const urlStrategies = `${strapi.backendURL}/content-manager/collection-types/application::strategy.strategy?page=1&pageSize=9999`;
+              const urlStrategy = `${strapi.backendURL}/content-manager/collection-types/application::strategy.strategy/`;
+              
+              const { data } = await axios.get(
+                urlStrategies,
+                headers
+                );
+
+              const stategies = data.results;
+
+              await Promise.all(stategies.map(async (e) => {
+                if (e.projects && e.projects.count && e.projects.count > 0) {
+                  const { data } = await axios.get(
+                    urlStrategy + e.id,
+                    headers
+                    );
+                  const strategy = data
+                  strategy.projects.forEach(p => {
+                    if (p.project_state === 1) {
+
+                    }
+                    const line = {
+                      name: p.name,
+                      total_estimated_hours: p.total_estimated_hours ? p.total_estimated_hours : 0,
+                      total_real_hours: p.total_real_hours ? p.total_real_hours : 0,
+                      count: 1,
+                      strategy: e.code,
+                      strategy_name: e.code_name
+                    };
+                    pivotedProjects.push(line);
+                  })
+                }
+              }));
+
+              //console.log('pivotedProjects', pivotedProjects)
+              
+              const projects = data.results;
+              this.setState({ isLoading: false, projects, error: false });
+
+              return pivotedProjects;
+            }
+            else if (this.state.message === 'showStats4') {
+              const pivotedProjects = [];
+              
+              const urlEntities = `${strapi.backendURL}/content-manager/collection-types/application::social-entity.social-entity?page=1&pageSize=9999`;
+              const urlEntity = `${strapi.backendURL}/content-manager/collection-types/application::social-entity.social-entity/`;
+
+              const { data } = await axios.get(
+                urlEntities,
+                headers
+                );
+
+              const entities = data.results;
+
+              await Promise.all(entities.map(async (e) => {
+                if (e.projects && e.projects.count && e.projects.count > 0) {
+                  const { data } = await axios.get(
+                    urlEntity + e.id,
+                    headers
+                    );
+                  const entity = data
+                  entity.projects.forEach(p => {
+                    if (p.project_state === 1) {
+
+                    }
+                    const line = {
+                      name: p.name,
+                      total_estimated_hours: p.total_estimated_hours ? p.total_estimated_hours : 0,
+                      total_real_hours: p.total_real_hours ? p.total_real_hours : 0,
+                      count: 1,
+                      entity: e.name
+                    };
+                    pivotedProjects.push(line);
+                  })
+                }
+              }));
+
+              //console.log('pivotedProjects', pivotedProjects)
+              
               const projects = data.results;
               this.setState({ isLoading: false, projects, error: false });
 
@@ -162,144 +267,23 @@ class Stats extends Component {
         const pivotedProjects = await fetchData();
         $("#project-stats").empty();
 
-        if (data.message === 'showStats') {
+        if (data.message === 'showStats') {        
+          configProject.dataSource.data = pivotedProjects;
+          $("#project-stats").kendoPivotGrid(configProject);
+        }
+        else if (data.message === 'showStats2') {
+          configDedication.dataSource.data = pivotedProjects;
+          $("#project-stats").kendoPivotGrid(configDedication);        
+        }
+        else if (data.message === 'showStats3') {
+          configStrategy.dataSource.data = pivotedProjects;
+          $("#project-stats").kendoPivotGrid(configStrategy);          
+        }
+        else {
+          configEntity.dataSource.data = pivotedProjects;
+          $("#project-stats").kendoPivotGrid(configEntity);
+        }
         
-          var pivotgrid1 = $("#project-stats").kendoPivotGrid({
-            filterable: true,
-            sortable: false,
-            dataSource: {     
-                data: pivotedProjects,
-                columns: [ { name: "project_state", expand: false }, { name: "leader", expand: false }, { name: "project_scope", expand: false } ], // Specify a dimension on columns.
-                rows: [ { name: "name", expand: false }], // Specify a dimension on rows.            
-                measures: ["Num", "Balanç (€)", "Hores previstes", "Hores reals"],
-                schema: {
-                    model: {
-                        fields: {
-                          project_state: { type: "string" },
-                          leader: { type: "string" },
-                          name: { type: "string" },
-                          project_scope: { type: "string" },
-                            // , format: "{0: dd-MM-yy}"
-                        }
-                    },
-                    cube: {
-                        dimensions: {
-                            project_state: { caption: "Estats (TOTS)" },
-                            leader: { caption: "Líders (TOTS)" },
-                            name: { caption: "Projectes (TOTS)" },
-                            project_scope: { caption: "Àmbits (TOTS)" },
-                            
-                        },
-                        //measures: ["Sum"]
-                        measures: {
-                            "Num": { 
-                              field: "count", 
-                              aggregate: "sum",                            
-                            }, 
-                            "Balanç (€)": { 
-                                field: "incomes_expenses", 
-                                aggregate: "sum",                            
-                            },
-                            "estimated_balance": { 
-                              field: "estimated_balance", 
-                              aggregate: "sum",
-                            },
-                            "Hores previstes": { 
-                              field: "total_estimated_hours", 
-                              aggregate: "sum",
-                            },
-                            "Hores reals": { 
-                              field: "total_real_hours", 
-                              aggregate: "sum",
-                            },
-                        }
-                    }
-                },
-                pageSize: 10000,
-                // schema: {
-                //     model: {
-                //         fields: {
-                //             commission: { type: "number" }                    
-                //         }
-                //     }
-                // },
-            },
-            height: '74vh',
-        });
-      }
-      else {
-        var pivotgrid1 = $("#project-stats").kendoPivotGrid({
-          filterable: true,
-          sortable: false,
-          dataSource: {     
-              data: pivotedProjects,
-              columns: [ { name: "project_state", expand: false }, { name: "leader", expand: false }, { name: "project_scope", expand: false }, { name: "year", expand: false }, { name: "month", expand: false }, { name: "day", expand: false }, { name: "username", expand: false } ], // Specify a dimension on columns.
-              rows: [ { name: "name", expand: false }], // Specify a dimension on rows.            
-              measures: ["Hores reals", "Hores previstes"],
-              schema: {
-                  model: {
-                      fields: {
-                        project_state: { type: "string" },
-                        leader: { type: "string" },
-                        name: { type: "string" },
-                        project_scope: { type: "string" },
-                        username: { type: "string" },                        
-                        year: { type: "number" },
-                        month: { type: "number" },                        
-                        day: { type: "number" },
-                          // , format: "{0: dd-MM-yy}"
-                      }
-                  },
-                  cube: {
-                      dimensions: {
-                          project_state: { caption: "Estats (TOTS)" },
-                          leader: { caption: "Líders (TOTS)" },
-                          name: { caption: "Projectes (TOTS)" },
-                          project_scope: { caption: "Àmbits (TOTS)" },
-                          month: { caption: "Mesos (TOTS)" },
-                          year: { caption: "Anys (TOTS)" },
-                          day: { caption: "Dies (TOTS)" },
-                          username: { caption: "Persones (TOTES)" },
-                          
-                          
-                      },
-                      //measures: ["Sum"]
-                      measures: {
-                          "Num": { 
-                            field: "count", 
-                            aggregate: "sum",                            
-                          }, 
-                          "Hores reals": { 
-                              field: "hours", 
-                              aggregate: "sum",                            
-                          },
-                          "Hores previstes": { 
-                            field: "estimated_hours", 
-                            aggregate: "sum",
-                          },
-                          "Total Hores previstes": { 
-                            field: "total_estimated_hours", 
-                            aggregate: "sum",
-                          },
-                          "Total Hores reals": { 
-                            field: "total_real_hours", 
-                            aggregate: "sum",
-                          },
-                      }
-                  }
-              },
-              pageSize: 10000,
-              // schema: {
-              //     model: {
-              //         fields: {
-              //             commission: { type: "number" }                    
-              //         }
-              //     }
-              // },
-          },
-          height: '74vh',
-        });
-      }
     }
     );
   }

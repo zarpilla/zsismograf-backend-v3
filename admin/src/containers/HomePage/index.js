@@ -142,6 +142,12 @@ const HomePage = ({ history: { push } }) => {
       type: 'blog',
     };
 
+    const linkStats3 = {
+      id: 'Stats',        
+      href: '',
+      onClick: handleClickStats3,
+      type: 'blog',
+    };
     
     const handleClickStats = e => {
       e.preventDefault();      
@@ -151,6 +157,16 @@ const HomePage = ({ history: { push } }) => {
     const handleClickStats2 = e => {
       e.preventDefault();      
       eventBus.dispatch("showStats", { message: 'showStats2' });
+    };
+
+    const handleClickStats3 = e => {
+      e.preventDefault();      
+      eventBus.dispatch("showStats", { message: 'showStats3' });
+    };
+
+    const handleClickStats4 = e => {
+      e.preventDefault();      
+      eventBus.dispatch("showStats", { message: 'showStats4' });
     };
   
     let showStats = false;
@@ -177,9 +193,6 @@ const HomePage = ({ history: { push } }) => {
               
               <br />
               <br />
-              <p>
-                  Welcome
-              </p>
               <div className="row">
                 <div className="col-lg-2 col-md-3 col-xs-12">
                   <ALink
@@ -202,21 +215,41 @@ const HomePage = ({ history: { push } }) => {
                 <div className="col-lg-2 col-md-3 col-xs-12">
                   <ALink
                     rel="noopener noreferrer"
-                    {...linkStats}
+                    {...linkProjects}
                     style={{ verticalAlign: ' bottom', marginBottom: 5 }}
                     onClick={handleClickStats}
                   >
-                    Est. Projectes
+                    Estad. Projectes
                   </ALink>
                 </div>
                 <div className="col-lg-2 col-md-3 col-xs-12">
                   <ALink
                     rel="noopener noreferrer"
-                    {...linkStats2}
+                    {...linkProjects}
                     style={{ verticalAlign: ' bottom', marginBottom: 5 }}
                     onClick={handleClickStats2}
                   >
-                    Est. Dedicació
+                    Estad. Dedicació
+                  </ALink>
+                </div>
+                <div className="col-lg-2 col-md-3 col-xs-12">
+                  <ALink
+                    rel="noopener noreferrer"
+                    {...linkProjects}
+                    style={{ verticalAlign: ' bottom', marginBottom: 5 }}
+                    onClick={handleClickStats3}
+                  >
+                    Estad. Estratègies
+                  </ALink>
+                </div>
+                <div className="col-lg-2 col-md-3 col-xs-12">
+                  <ALink
+                    rel="noopener noreferrer"
+                    {...linkProjects}
+                    style={{ verticalAlign: ' bottom', marginBottom: 5 }}
+                    onClick={handleClickStats4}
+                  >
+                    Estad. Intercooperació
                   </ALink>
                 </div>
               </div>
