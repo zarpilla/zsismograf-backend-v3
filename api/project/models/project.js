@@ -30,7 +30,7 @@ let calculateTotals = async (data) => {
     if (data.expenses) {
         let total_expenses = 0
         data.expenses.forEach(i => {
-            i.total_amount = i.quantity * i.amount;
+            i.total_amount = (i.quantity ? i.quantity : 0 ) * (i.amount ? i.amount : 0);
             total_expenses += i.total_amount;
         })
         data.total_expenses = total_expenses;
@@ -39,7 +39,7 @@ let calculateTotals = async (data) => {
     if (data.incomes) {
         let total_incomes = 0
         data.incomes.forEach(i => {
-            i.total_amount = i.quantity * i.amount;
+            i.total_amount = (i.quantity ? i.quantity : 0 ) * (i.amount ? i.amount : 0);
             total_incomes += i.total_amount;
         })
         data.total_incomes = total_incomes
