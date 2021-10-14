@@ -1,0 +1,951 @@
+[
+  {
+    "id": 1,
+    "name": "main",
+    "slug": "main",
+    "published_at": "2020-11-27T15:33:28.000Z",
+    "created_at": "2020-11-27T15:33:28.000Z",
+    "updated_at": "2021-02-22T08:38:54.000Z",
+    "analysis": {
+      "id": 1,
+      "name_en": null,
+      "name_ca": "Sismògraf",
+      "name_es": null,
+      "description_en": null,
+      "description_ca": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim, odio vitae convallis varius, dui erat placerat dui, sed dignissim magna mauris non urna. Ut sagittis tincidunt pulvinar. Proin sit amet mi et sem viverra dictum. In vel dui semper, sagittis tellus ac, eleifend lectus. **Integer eget tincidunt justo**. Duis nec turpis nulla. Suspendisse dapibus nulla id ligula rutrum fringilla. Suspendisse nibh neque, efficitur id pretium eu, iaculis in libero. Sed blandit, nibh vitae lacinia elementum, lectus diam interdum ipsum, eu sollicitudin quam nibh eget orci. Aliquam efficitur libero vel risus euismod, sit amet ultrices eros hendrerit.\n\nNullam vitae sagittis dui. Etiam sed urna facilisis, tincidunt mi et, consequat erat. Curabitur non sapien viverra, dictum sem nec, elementum dui. Nullam non nisi augue. Ut in nunc nibh. Nam aliquet lorem tortor, non pulvinar lacus blandit non. Vestibulum sollicitudin odio ac ante condimentum commodo. In facilisis quis quam in sagittis. Vestibulum id justo sit amet nibh aliquet vestibulum. Phasellus eleifend ac metus vel scelerisque. Sed vitae mi a erat dignissim commodo. Etiam ac dapibus est, ut consectetur massa. Nunc in posuere nisi, ac faucibus est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut consectetur magna est, non interdum eros interdum sit amet. ",
+      "description_es": null,
+      "scopes": [
+        {
+          "id": 1,
+          "text_en": null,
+          "text_es": null,
+          "text_ca": "ÀMBIT PERSONAL",
+          "capacities": [
+            {
+              "id": 1,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Desenvolupament personal",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 1,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Explotació",
+                  "value": 1
+                },
+                {
+                  "id": 2,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Objectivització del treball laboral",
+                  "value": 2
+                },
+                {
+                  "id": 3,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Conductisme productiu",
+                  "value": 3
+                },
+                {
+                  "id": 4,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Desenvolupament personal extern i forçat",
+                  "value": 4
+                },
+                {
+                  "id": 5,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Activisme – autoexplotació",
+                  "value": 5
+                },
+                {
+                  "id": 6,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Consciliació social",
+                  "value": 6
+                },
+                {
+                  "id": 7,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Proactivitat",
+                  "value": 7
+                },
+                {
+                  "id": 8,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Treball",
+                  "value": 8
+                }
+              ],
+              "questions": [
+                {
+                  "id": 1,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Q1",
+                  "result": null,
+                  "indicators": [
+                    {
+                      "id": 97,
+                      "text_en": null,
+                      "text_es": null,
+                      "text_ca": "V1",
+                      "value": 1
+                    },
+                    {
+                      "id": 98,
+                      "text_en": null,
+                      "text_es": null,
+                      "text_ca": "V2",
+                      "value": 2
+                    },
+                    {
+                      "id": 99,
+                      "text_en": null,
+                      "text_es": null,
+                      "text_ca": "V5",
+                      "value": 5
+                    },
+                    {
+                      "id": 100,
+                      "text_en": null,
+                      "text_es": null,
+                      "text_ca": "V7",
+                      "value": 7
+                    },
+                    {
+                      "id": 101,
+                      "text_en": null,
+                      "text_es": null,
+                      "text_ca": "V8",
+                      "value": 8
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Q2",
+                  "result": null,
+                  "indicators": [
+                    {
+                      "id": 102,
+                      "text_en": null,
+                      "text_es": null,
+                      "text_ca": "V1",
+                      "value": 1
+                    },
+                    {
+                      "id": 103,
+                      "text_en": null,
+                      "text_es": null,
+                      "text_ca": "V5",
+                      "value": 5
+                    },
+                    {
+                      "id": 104,
+                      "text_en": null,
+                      "text_es": null,
+                      "text_ca": "V8",
+                      "value": 8
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Treball reproductiu",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 9,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Patriarcal",
+                  "value": 1
+                },
+                {
+                  "id": 10,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Productivisme",
+                  "value": 2
+                },
+                {
+                  "id": 11,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Síntoma Tatcher",
+                  "value": 3
+                },
+                {
+                  "id": 12,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Paritat",
+                  "value": 4
+                },
+                {
+                  "id": 13,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Feminisme revindicatiu",
+                  "value": 5
+                },
+                {
+                  "id": 14,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Posar les cures al centre",
+                  "value": 6
+                },
+                {
+                  "id": 15,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Cures estructurals",
+                  "value": 7
+                },
+                {
+                  "id": 16,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Equitat comunitàri del treball reproductiu",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            },
+            {
+              "id": 3,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Arrelament i identitat",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 17,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Treball per sobre el propòsit",
+                  "value": 1
+                },
+                {
+                  "id": 18,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Innovació utilitària",
+                  "value": 2
+                },
+                {
+                  "id": 19,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Venda per sobre el valor",
+                  "value": 3
+                },
+                {
+                  "id": 20,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "RSE",
+                  "value": 4
+                },
+                {
+                  "id": 21,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Propòsit per sobre el treball",
+                  "value": 5
+                },
+                {
+                  "id": 22,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Sentiment de pertinença",
+                  "value": 6
+                },
+                {
+                  "id": 23,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Iniciativa arrelada",
+                  "value": 7
+                },
+                {
+                  "id": 24,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Propòsit i treball en equilibri",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "text_en": null,
+          "text_es": null,
+          "text_ca": "ÀMBIT ESTRUCTURAL",
+          "capacities": [
+            {
+              "id": 4,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Organització interna",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 25,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Autoritarisme",
+                  "value": 1
+                },
+                {
+                  "id": 26,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Demagogia",
+                  "value": 2
+                },
+                {
+                  "id": 27,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Votació com a única eina",
+                  "value": 3
+                },
+                {
+                  "id": 28,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Delegatiu",
+                  "value": 4
+                },
+                {
+                  "id": 29,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Consens",
+                  "value": 5
+                },
+                {
+                  "id": 30,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Rols col·legiats",
+                  "value": 6
+                },
+                {
+                  "id": 31,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Consentiment",
+                  "value": 7
+                },
+                {
+                  "id": 32,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Co-creació autogestionària (ontonomia)",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            },
+            {
+              "id": 5,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Economia",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 33,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Deute",
+                  "value": 1
+                },
+                {
+                  "id": 34,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Precarietat",
+                  "value": 2
+                },
+                {
+                  "id": 35,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Subsistència",
+                  "value": 3
+                },
+                {
+                  "id": 36,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Capacitat d’inversió",
+                  "value": 4
+                },
+                {
+                  "id": 37,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Sostenibilitat econòmica",
+                  "value": 5
+                },
+                {
+                  "id": 38,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Finances co-gestionades",
+                  "value": 6
+                },
+                {
+                  "id": 39,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Economia cooperativa",
+                  "value": 7
+                },
+                {
+                  "id": 40,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Mutualisme comunitàri",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            },
+            {
+              "id": 6,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Jurídic i legal",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 41,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Deixadesa",
+                  "value": 1
+                },
+                {
+                  "id": 42,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Gestió de mínims",
+                  "value": 2
+                },
+                {
+                  "id": 43,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Externalització de responsabilitats",
+                  "value": 3
+                },
+                {
+                  "id": 44,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Control de la gestió",
+                  "value": 4
+                },
+                {
+                  "id": 45,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Internalització",
+                  "value": 5
+                },
+                {
+                  "id": 46,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Externalització de tasques",
+                  "value": 6
+                },
+                {
+                  "id": 47,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Co-gestió amb responsabilitats",
+                  "value": 7
+                },
+                {
+                  "id": 48,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Auto-gestió comunitària",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "text_en": null,
+          "text_es": null,
+          "text_ca": "ÀMBIT D’INFLUÈNCIA",
+          "capacities": [
+            {
+              "id": 7,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Avaluació i estratègia",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 49,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Invasora ",
+                  "value": 1
+                },
+                {
+                  "id": 50,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Mercantilista",
+                  "value": 2
+                },
+                {
+                  "id": 51,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Oportunista",
+                  "value": 3
+                },
+                {
+                  "id": 52,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Parisitària evangelitzadora",
+                  "value": 4
+                },
+                {
+                  "id": 53,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Confrontativa",
+                  "value": 5
+                },
+                {
+                  "id": 54,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Responsiva",
+                  "value": 6
+                },
+                {
+                  "id": 55,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Reconsciliadors",
+                  "value": 7
+                },
+                {
+                  "id": 56,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Sistèmica",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            },
+            {
+              "id": 8,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Comunicació externa",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 57,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Comunicació de la por i l’engany",
+                  "value": 1
+                },
+                {
+                  "id": 58,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Creació de necessitats externes",
+                  "value": 2
+                },
+                {
+                  "id": 59,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Màrqueting condecendent",
+                  "value": 3
+                },
+                {
+                  "id": 60,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Màrqueting de valors",
+                  "value": 4
+                },
+                {
+                  "id": 61,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Revindicativa",
+                  "value": 5
+                },
+                {
+                  "id": 62,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Comunicació per a la transformació",
+                  "value": 6
+                },
+                {
+                  "id": 63,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Propositiva",
+                  "value": 7
+                },
+                {
+                  "id": 64,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Diàleg dialògic",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            },
+            {
+              "id": 9,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Intercooperació",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 65,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Monopoli",
+                  "value": 1
+                },
+                {
+                  "id": 66,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Oligopoli",
+                  "value": 2
+                },
+                {
+                  "id": 67,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Competència",
+                  "value": 3
+                },
+                {
+                  "id": 68,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Oligopoli cooperatiu",
+                  "value": 4
+                },
+                {
+                  "id": 69,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Autonomisme",
+                  "value": 5
+                },
+                {
+                  "id": 70,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Interdependència",
+                  "value": 6
+                },
+                {
+                  "id": 71,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Interindependència ",
+                  "value": 7
+                },
+                {
+                  "id": 72,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Ecosistema cooperatiu",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "text_en": null,
+          "text_es": null,
+          "text_ca": "ÀMBIT COMUNITÀRI",
+          "capacities": [
+            {
+              "id": 10,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Impacte econòmic",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 73,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Degradació",
+                  "value": 1
+                },
+                {
+                  "id": 74,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Deslocalització",
+                  "value": 2
+                },
+                {
+                  "id": 75,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Centralisme",
+                  "value": 3
+                },
+                {
+                  "id": 76,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Pesebrisme",
+                  "value": 4
+                },
+                {
+                  "id": 77,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Decreixement",
+                  "value": 5
+                },
+                {
+                  "id": 78,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Restauratiu",
+                  "value": 6
+                },
+                {
+                  "id": 79,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Reconsciliadora",
+                  "value": 7
+                },
+                {
+                  "id": 80,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Regeneratiu",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            },
+            {
+              "id": 11,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Impacte social",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 81,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Esclavitud",
+                  "value": 1
+                },
+                {
+                  "id": 82,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Utilitari",
+                  "value": 2
+                },
+                {
+                  "id": 83,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Paternalisme",
+                  "value": 3
+                },
+                {
+                  "id": 84,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Assistencialisme",
+                  "value": 4
+                },
+                {
+                  "id": 85,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Justícia Social",
+                  "value": 5
+                },
+                {
+                  "id": 86,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Restauratiu",
+                  "value": 6
+                },
+                {
+                  "id": 87,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Reconsciliadora",
+                  "value": 7
+                },
+                {
+                  "id": 88,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Regeneratiu",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            },
+            {
+              "id": 12,
+              "text_en": null,
+              "text_es": null,
+              "text_ca": "Impacte ecològic",
+              "result": null,
+              "indicators": [
+                {
+                  "id": 89,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Expoliació",
+                  "value": 1
+                },
+                {
+                  "id": 90,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Extracció",
+                  "value": 2
+                },
+                {
+                  "id": 91,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Green washing",
+                  "value": 3
+                },
+                {
+                  "id": 92,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Proteccionisme",
+                  "value": 4
+                },
+                {
+                  "id": 93,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Ecologisme",
+                  "value": 5
+                },
+                {
+                  "id": 94,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Restauratiu",
+                  "value": 6
+                },
+                {
+                  "id": 95,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Reconsciliadora",
+                  "value": 7
+                },
+                {
+                  "id": 96,
+                  "text_en": null,
+                  "text_es": null,
+                  "text_ca": "Regeneratiu",
+                  "value": 8
+                }
+              ],
+              "questions": []
+            }
+          ]
+        }
+      ],
+      "image": null
+    },
+    "analyses": [
+      {
+        "id": 1,
+        "organization": "webcoop",
+        "project": "webcoop",
+        "region": "",
+        "scope": "",
+        "language": "ca",
+        "template": 1,
+        "uid": "0017939e-f150-4cc0-a89f-90f7ab67e03a",
+        "email": "jordi@webcoop.cat",
+        "published_at": "2020-11-27T16:18:07.000Z",
+        "created_at": "2020-11-27T16:18:07.000Z",
+        "updated_at": "2021-02-22T08:38:54.000Z",
+        "results": [
+          { "id": 1, "capacity": 1, "result": 5, "question": null },
+          { "id": 2, "capacity": 2, "result": 7, "question": null },
+          { "id": 3, "capacity": 3, "result": 7, "question": null },
+          { "id": 4, "capacity": 4, "result": 6, "question": null },
+          { "id": 5, "capacity": 5, "result": 5, "question": null },
+          { "id": 6, "capacity": 6, "result": 4, "question": null },
+          { "id": 7, "capacity": 7, "result": 5, "question": null },
+          { "id": 8, "capacity": 8, "result": 4, "question": null },
+          { "id": 9, "capacity": 9, "result": 6, "question": null },
+          { "id": 10, "capacity": 10, "result": 1, "question": null },
+          { "id": 11, "capacity": 11, "result": 1, "question": null },
+          { "id": 12, "capacity": 12, "result": 1, "question": null }
+        ]
+      }
+    ]
+  }
+]

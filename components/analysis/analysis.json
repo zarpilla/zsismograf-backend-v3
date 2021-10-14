@@ -6,13 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "name_en": {
-      "type": "string"
-    },
-    "name_ca": {
-      "type": "string"
-    },
-    "name_es": {
+    "name": {
       "type": "string"
     },
     "scopes": {
@@ -20,13 +14,7 @@
       "repeatable": true,
       "component": "scope.scope"
     },
-    "description_en": {
-      "type": "richtext"
-    },
-    "description_ca": {
-      "type": "richtext"
-    },
-    "description_es": {
+    "description": {
       "type": "richtext"
     },
     "image": {

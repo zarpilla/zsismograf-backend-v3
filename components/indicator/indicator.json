@@ -7,13 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "text_en": {
-      "type": "string"
-    },
-    "text_es": {
-      "type": "string"
-    },
-    "text_ca": {
+    "text": {
       "type": "string"
     },
     "value": {
