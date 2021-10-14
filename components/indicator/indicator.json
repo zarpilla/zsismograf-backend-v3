@@ -11,7 +11,7 @@
       "type": "string"
     },
     "value": {
-      "type": "integer",
+      "type": "decimal",
       "required": true
     }
   }

@@ -21,7 +21,7 @@
       "component": "question.question"
     },
     "result": {
-      "type": "integer"
+      "type": "decimal"
     }
   }
 }

@@ -16,7 +16,7 @@
       "component": "indicator.indicator"
     },
     "result": {
-      "type": "integer"
+      "type": "decimal"
     }
   }
 }
